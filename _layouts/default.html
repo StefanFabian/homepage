@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="{{ "/assets/js/script.js" | relative_url }}" as="script">
+    <link href="{{ "/assets/FontAwesome/css/fontawesome.css" | relative_url }}" rel="stylesheet">
+    <link href="{{ "/assets/FontAwesome/css/brands.css" | relative_url }}" rel="stylesheet">
+    <link href="{{ "/assets/FontAwesome/css/solid.css" | relative_url }}" rel="stylesheet">
+
+    {% seo %}
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+
+        {% if site.logo %}
+          <img class="logo" src="{{site.logo | relative_url}}" alt="Logo" />
+        {% endif %}
+
+        <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
+
+        {% if site.description %}
+        <p>{{ site.description }}</p>
+        {% endif %}
+
+        <div class="socials">
+          <a href="https://www.github.com/{{ site.github_username }}" target="_blank"><i class="fa fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/{{ site.github_username }}" target="_blank"><i class="fa fa-brands fa-linkedin"></i></a>
+        </div>
+        <strong>E-Mail: {% include email.html data="t92Yu4WYpJWYm5WYmVGdzBEdjFGdu92Y" %}</strong>
+
+      </header>
+      <section>
+
+      {{ content }}
+
+        <footer>
+          <!-- You may use this theme as long as you keep the Theme by Stefan Fabian line -->
+          <p><small>
+            Theme by <a href="https://www.stefanfabian.com">Stefan Fabian</a> |
+            <a href="{{ "/legal" | relative_url }}">Legal</a> |
+            <a href="{{ "/privacy" | relative_url }}">Privacy</a><br/>
+            Hosted on GitHub Pages | <a href="{{ site.github.repository_url }}">View Source</a>
+          </small></p>
+        </footer>
+      </section>
+    </div>
+    <script src="{{ "/assets/js/script.js" | relative_url }}" lang="javascript"></script>
+  </body>
+</html>

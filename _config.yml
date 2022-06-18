@@ -1,0 +1,17 @@
+
+title: Stefan Fabian
+url: "https://www.stefanfabian.com"
+github_username: StefanFabian
+linkedin: stefanfabian
+logo: assets/img/logo.png
+collections:
+  events:
+    output: false
+  opensource:
+    output: false
+
+# Build settings
+exclude:
+  - obfuscate.py
+  - Gemfile
+  - Gemfile.lock

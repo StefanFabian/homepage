@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<h2>About Me</h2>
+
+<p>
+  I'm a robotics researcher at the Technical University of Darmstadt focusing on ground
+  robot navigation in rescue contexts (harsh and unknown terrain).
+  However, for legacy reasons I also work a bit on UI and have released some cool libraries
+  and plugins that help robotics enthusiasts to create great looking UIs with little effort.
+</p>
+
+
+<h2>Open-Source Projects</h2>
+<div class="open-source-projects">
+{% assign projects = site.opensource | sort:"order" %}
+{% for project in projects reversed %}
+  {% include opensource-project.html name=project.name %}
+{% endfor %}
+</div>
+
+<h2>Noteworthy Events</h2>
+
+<div class="events">
+{% assign events = site.events | sort:"date" %}
+{% for event in events reversed %}
+  {% include event.html name=event.name %}
+{% endfor %}
+</div>
+

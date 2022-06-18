@@ -1,0 +1,16 @@
+{% assign event = site.events | find: "name", include.name %}
+
+<div class="event">
+  <div class="year">
+    {{ event.date | date: '%Y' }}
+  </div>
+  <div class="icon">
+    <span class="line"></span>
+    <i class="fa fa-solid fa-{{ event.icon }}"></i>
+  </div>
+  <div class="content">
+    <h3>{{ event.name }}</h3>
+    {{ event.content | markdownify }}
+  </div>
+</div>
+
