@@ -1,11 +1,11 @@
 @import "fonts";
 
 body {
-  background-color: #fff;
-  padding: 4px;
+  background-color: #e8e8e8;
   font: 16px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#727272;
   font-weight:400;
+  margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -135,8 +135,9 @@ hr {
 .wrapper {
   display: flex;
   flex-direction: column;
-  max-width:960px;
+  max-width:1000px;
   margin:0 auto;
+  background: #f2f2f2;
 }
 
 // ===============
@@ -145,11 +146,13 @@ hr {
 
 header {
   flex: 1 0 280px;
-  margin: 0 0 32px 0;
+  padding: 12px 0 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
   -webkit-font-smoothing:subpixel-antialiased;
+  box-shadow: 3px 0 6px #888;
+  position: relative;
 
   .logo {
     border-radius: 50%;
@@ -177,9 +180,9 @@ strong {
 }
 
 section {
+  background: #f6f6f6;
   flex: 1 1 600px;
-  padding: 8px;
-  padding-bottom: 48px;
+  padding: 32px 16px;
 }
 
 .open-source-projects { margin-bottom: 24px; }
@@ -188,7 +191,7 @@ section {
   display: flex;
   flex-direction: row;
   border: 1px solid #eee;
-  border-radius: 8px;
+  border-radius: 4px;
   box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.15), 0 1px 3px 0 rgba(0, 0, 0, 0.1);
   padding: 10px;
   box-sizing: border-box;
@@ -228,7 +231,7 @@ section {
   .year {
     align-self: center;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 1.17em;
     color: #267CB9;
   }
 
@@ -239,7 +242,7 @@ section {
     align-items: center;
     justify-content: center;
     flex: 0 0 auto;
-    margin: 0 12px 0 4px;
+    margin: 0 12px 0 8px;
 
     .line {
       position: absolute;
@@ -249,7 +252,6 @@ section {
       margin-left: -2px;
       width: 4px;
       background: #069;
-      z-index: -1;
     }
 
     .fa {
@@ -263,6 +265,7 @@ section {
       color: #ffffff;
       font-size: 24px;
       border-radius: 50%;
+      z-index: 1;
     }
   }
 
@@ -284,16 +287,20 @@ footer {
 }
 
 @media print, screen and (min-width: 720px) {
-  body {
-    padding:48px;
-  }
 
   .wrapper {
     flex-direction: row;
+    box-shadow: -6px 0 12px -1px #888, 6px 0 12px -1px #888;
+    position: relative;
   }
 
   header {
-    margin: 0 48px;
+    padding: 24px 16px;
+    box-shadow: 2px 0 4px -1px #888;
+  }
+
+  section {
+    padding: 32px 24px;
   }
 
   .event {
